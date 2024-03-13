@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Card</title>
+        <link rel="icon" href="image/flower1.jpg" type="image/jpg"/>
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" type="text/css"> -->
+        <script src="https://kit.fontawesome.com/d2e3c8879c.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="card.css" type="text/css"/>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Todo List</h2>
+                    <div class="form-group">
+                        <label for="task">Enter New Task</label>
+                        <input type="text" name="task" id="task" class="form-control">
+                    </div>
+                    <button type="button" class="btn" id="addtask">Add Task</button>
+                </div>
+                <div class="card-footer">
+                    <h2>All My List</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            List Item 1
+                            <a href="#" class="delete-item" id="delete1"><i class="fa-solid fa-trash"></i></a>
+                        </li>
+                        <li class="list-group-item">
+                            List Item 2
+                            <a href="#" class="delete-item" id="delete2"><i class="fa-solid fa-trash"></i></a>
+                        </li>
+                        <li class="list-group-item">
+                            List Item 3
+                            <a href="#" class="delete-item" id="delete3"><i class="fa-solid fa-trash"></i></a>
+                        </li>
+                        <li class="list-group-item">
+                            List Item 4
+                            <a href="#" class="delete-item" id="delete4"><i class="fa-solid fa-trash"></i></a>
+                        </li>
+                        <li class="list-group-item">
+                            List Item 5
+                            <a href="#" class="delete-item" id="delete5"><i class="fa-solid fa-trash"></i></a>
+                        </li>
+                    </ul>
+                    <button class="btn2" id="task">Clear Task</button>
+                </div>
+
+                <div class="imagecontainer">
+                    <img src="https://i.gifer.com/ZKZg.gif" class="image" alt="3"/>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="card.js"></script>
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+    </body>
+</html>

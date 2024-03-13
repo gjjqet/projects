@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Regular Function</title>
+        <style type="text/css">
+            *{
+                box-sizing: border-box;
+            }
+
+            body{
+                height: 100vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container{
+                width: 300px;
+                background-color: #f4f4f4;
+                padding:10px;
+                box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            }
+
+            label{
+                display: block;
+                margin:10px 0;
+            }
+
+            .form-control{
+                width: 100%;
+                padding: 5px;
+            }
+
+            .btn{
+                width: 100%;
+                margin-top: 10px;
+                font-size: 16px;
+                padding: 5px;
+                background-color: darkblue;
+                color: #fff;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <div class="container">
+            <h3>Show Name = <span id="replacename">Aung Aung</span></h3>
+            <form action="" method="">
+                <div class="form-group">
+                    <label for="fistname">First Name</label>
+                    <input type="text" name="firstname" id="firstname" class="form-control" autocomplete="off" autofocus/>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" name="lastname" id="lastname" class="form-control" autocomplete="off"/>
+                </div>
+
+                <button type="button" class="btn" onclick="getdata()">Get Name</button>
+
+                
+            </form>
+        </div>
+
+
+        <script type="text/javascript">
+            
+        function getdata(){
+            const getfirstname=document.getElementById("firstname").value;
+            const getlastname=document.getElementById("lastname").value;
+
+            const getreplacename=document.getElementById("replacename");
+
+            getreplacename.textContent=`${getfirstname} ${getlastname}`;
+
+            document.getElementById("firstname").value="";
+            document.getElementById("lastname").value="";
+
+            document.getElementById("firstname").focus();
+
+        }
+    
+        </script>
+
+    </body>
+</html>
+
+
+<!-- //(A)Default Function | System Function
+        //(B)User Define Function -->
+        <!-- (1)Regular Function
+                (i)Manual Function
+                (ii)Paramenter Function
+                      (a)Single Parameter Function
+                      (b)Multi Paramenter Function
+
+             (2)Arrow Function (ECMA 6)
+                    (i)Manual Function
+                    (ii)Paramenter Function
+                        (a)Single Parameter Function
+                        (b)Multi Paramenter Function
+
+             (3)Generator Function -->

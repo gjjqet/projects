@@ -1,0 +1,63 @@
+:root{
+    --sg:lightseagreen;
+    --wh:white;
+    --bl:black;
+    --vo:violet;
+    --re:red;
+    --ye:yellow;
+    --lg:lightgray
+}
+
+button{
+    margin-top: 30px;
+    border-radius: 8px;
+    padding: 3px 10px;
+    margin-left: 7px;
+    border: none;
+    outline: none;
+    border: 3px solid black;
+}
+
+.light{
+    background-color: white;
+}
+
+.dark{
+    background-color: black;
+    color: white;
+}
+
+.buttoncontainer{
+    text-align: end;
+}
+
+.mainimagecontainer{
+    margin-top: 30px;
+}
+
+.imagecontainer{
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: 25px;
+    border-radius: 3px;
+    display: inline-block;
+     background-color:var(--sg);
+   
+
+    transition: all 0.2s ease-in-out;
+    
+}
+
+.imagecontainer:hover{
+    transform: scale(1.05);
+    background-color: var(--re); 
+    
+}
+
+.image{
+    width: 200px;
+    height: 250px;
+}
+
+
+

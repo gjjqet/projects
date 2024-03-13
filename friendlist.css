@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 500px;
+    margin: auto;
+    margin-top: 30px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+h3{
+    margin: 10px 0;
+}
+
+input{
+    box-sizing: border-box;
+}
+
+.input{
+    width: 500px;
+    padding: 4px 7px;
+
+}
+
+.input::placeholder{
+    color:black;
+    font-size: 15px;
+}
+
+.sortcontainer{
+    width: 500px;
+    height: 30px;
+    background-color: white;
+    margin: 3px 0;
+
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+}
+
+.sort{
+    width: 249px;
+    background-color: steelblue;
+    text-align: center;
+    line-height: 30px;
+}
+
+.friendlist{
+    width: 500px;
+    background-color: lightblue;
+
+}
+
+.listdiv,.listdiv1{
+    height: 30px;
+    border-bottom: 1px solid red;
+    padding:0 10px;
+    line-height: 30px;
+}

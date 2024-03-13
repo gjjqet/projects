@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fake Store Product</title>
+        <link rel="icon" href="image/game.jpg" type="image/jpg"/>
+        <style>
+
+            .container{
+                padding: 30px;
+                text-align: center;
+            }
+
+            .card{
+                display: flex;
+                justify-content: center;
+                box-shadow: 1px 1px 15 black;   
+                border: 1px solid lightgray;
+                box-shadow: 0px 0px 15px black;
+                margin-top: 20px;
+                
+            }
+
+            .cardbody{
+                height: 80px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .cardcontainer{
+                display: flex;
+                justify-content: center;
+
+            }
+
+            .title{
+                margin: 0px 25px;
+            }
+
+            .idimage{
+                height: 100%;
+            }
+
+            #table{
+                width: 1000px;
+                display: none;
+                border-collapse: collapse;
+                text-align: center;
+                border: 1px solid red;
+                margin: auto;
+            }
+
+            table th{
+                background-color: seagreen;
+               
+                padding: 8px 50px;
+            }
+
+            table tr{
+                border-bottom: 1px solid black;
+            }
+
+            table tr:hover{
+                background-color: lightgray;
+            }
+
+            .image{
+                width: 80px;
+                background-color: lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cardcontainer">
+            <div class="card">
+                <div class="cardbody" id="forshow">
+                   
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <table id="table">
+                <thead>
+                    <th>No</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Rate</th>
+                    <th>Image</th>
+                </thead>
+                <tbody id="imagecontainer">
+                    
+                </tbody>
+            </table>
+        </div>
+        <script type="text/javascript">
+
+            const imagecontainer=document.getElementById("imagecontainer");
+            const tableTag=document.getElementById("table");
+            const forshow=document.getElementById("forshow");
+            const forcard=document.querySelector(".card")
+
+           forcard.style.display="none";
+
+            let list;
+            fetch("https://fakestoreapi.com/products").then((response)=>{
+                let respon=response.json();
+                return respon;
+            }).then((respon)=>{
+
+               let product=respon;
+               tableTag.style.display="block";
+    
+               for(let i=0;i<product.length;i++){
+               list=`
+                   <tr onclick="show(${product[i].id})">
+                       <td>${product[i].id}</td>
+                       <td>${product[i].title}</td>
+                       <td>${product[i].price}</td>
+                       <td>${product[i].rating.rate}</td>
+                       <td>
+                          <a href="${product[i].image}">
+                            <img src="${product[i].image}" class="image"/>
+                          </a>
+                        </td>
+                   </tr>
+               `;
+
+               imagecontainer.innerHTML+=list
+            }
+
+            }).catch((error)=>{
+                console.log(error)
+            });
+
+
+            let forid;
+            const show=(id)=>{
+                forshow.innerHTML=""
+                fetch('https://fakestoreapi.com/products/'+id).then((respon)=>{
+                    let forres=respon.json();
+                    return forres
+                }).then((data)=>{
+                    console.log(data);
+
+                    forid=`<img src="${data.image}" class="idimage"/>
+                           <h3 class="title">Name: ${data.title}</h3>
+                           <div>Price: ${data.price}$</div>
+                    `;
+
+                    forshow.innerHTML+=forid;
+                    forcard.style.display="block";
+                })
+            }
+
+
+            
+        </script>
+    </body>
+</html>

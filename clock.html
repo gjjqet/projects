@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clock</title>
+    <link rel="icon" href="../image/icon2.png" type="image/png">
+  </head>
+  <body>
+
+    <div class="container" style="display: grid;place-items:center;height: 100vh;">
+      <h1 class="display">00:00:00 AM  Sunday</h1>
+    </div>
+
+    <script type="text/javascript">
+
+
+    const display=document.querySelector(".display");
+
+    const forstart=()=>{
+
+      const fordate=new Date();
+    let forhours=fordate.getHours();
+    const forminutes=fordate.getMinutes();
+    const forseconds=fordate.getSeconds();
+    const forday=fordate.getDay();
+
+    const forday2=["Sunday","Monday","Tueday","Wednesday","Tuesday","Friday","Satuarday"];
+
+    let forampm
+    if(forhours>12){
+      forampm="PM";
+      forhours=forhours-12;
+
+    }else{
+      forampm="AM"
+    }
+
+    display.innerHTML=`${forhours} :  ${forminutes} : ${forseconds}   ${forampm} ${forday2[forday]}`;
+
+    };
+
+    forstart();
+    setInterval(
+      forstart
+    , 1000);
+
+    
+    </script>
+  </body>
+</html>

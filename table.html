@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table</title>
+        <link rel="icon" href="image/calculator.jpg" type="image/jpg"/>
+        <style>
+            .container{
+                height: 100vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            table{
+                width: 800px;
+                border-collapse: collapse;
+                text-align: center;
+                border: 2px solid red;
+            }
+
+            table thead th{
+                padding: 8px;
+                background-color: green;
+            }
+
+            table tr td{
+                padding:8px;
+            }
+
+           table tr:hover{
+            opacity: 0.8;
+           }
+
+            table tr:nth-child(odd){
+                background-color:lightgray;
+            }
+
+            table tr:nth-child(even){
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <table>
+                <thead>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Grade</th>
+                    <th>Address</th>
+                    <th>Father</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Aung Aung</td>
+                        <td>8</td>
+                        <td>Mandalay</td>
+                        <td>U Aung Kyaw</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Mya Mya</td>
+                        <td>9</td>
+                        <td>Yangon</td>
+                        <td>U Mya</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Zaw Zaw</td>
+                        <td>4</td>
+                        <td>Pwin Oo Lwin</td>
+                        <td>U Zaw Maung</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Su Su</td>
+                        <td>5</td>
+                        <td>Pyi</td>
+                        <td>U Su Kyi</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Nu Nu</td>
+                        <td>9</td>
+                        <td>Mandalay</td>
+                        <td>U Nu Nwe</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

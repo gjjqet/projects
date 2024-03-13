@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="icon" href="image/calculator.jpg" type="image/jpg"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <link rel="stylesheet" href="calculator.css" type="text/css"/>
+    </head>
+    <body>
+        <div class="container">
+          
+            <div class="form">
+                <h1>Caluclator Project</h1>
+                <div class="result">0</div>
+                <div class="containerdiv">
+                    <label for="firstnumber">Number One :</label>
+                    <input type="number" name="firstnumber" id="firstnumber" class="input" placeholder="Enter First Number..."/>
+                </div>
+                <span id="firsterror">You need to fill first number!!</span>
+
+                <div class="containerdiv ">
+                    <label for="secondnumber">Number Two :</label>
+                    <input type="number" name="secondnumber"  id="secondnumber" class="input" placeholder="Enter Second Number..."/>
+                </div>
+                <span id="seconderror">You need to fill second number!!</span>
+
+                <div class="containerdiv">
+                    <label for="option">Operation :</label>
+                    <select name="option" id="option" class="input">
+                        <option value="choose" selected disabled>Choose Option</option>
+                        <option value="addition">+</option>
+                        <option value="subtraction">-</option>
+                        <option value="multiply">*</option>
+                        <option value="division">/</option>
+                    </select>
+                </div>
+                <span id="thirderror">You need to choose one option!!</span>
+                <button type="button" class="input" id="btn">Calculate</button>
+            </div>
+        </div>
+        <script src="calculator.js"></script>
+    </body>
+</html>
