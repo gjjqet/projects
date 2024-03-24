@@ -3,4 +3,3 @@ window.addEventListener("load",()=>{
     circle.classList.add("changemain")
 })
 
-let text;
